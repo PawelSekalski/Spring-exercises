@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+
+<head>
+	<link rel="stylesheet" type="text/css" href ="style.css"/>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<script type="text/javascript"></script>
+</head>
+
+	<body>
+		
+		<a href = "javascript:alert('chcesz przejść na o mnie?');">o mnie</a> <br/>
+		<a href = "/blog">blog</a> <br/>
+		<a href = "#">kontakt</a>
+		
+		
+		<p> +++++++++++++++++++ </p>
+		<form th:action="@{/sukces}" method="post">
+			<p> podaj imię </p>
+			<input type="text" th:field="${k.imie}" /> <br/>
+			<p> podaj nazwisko </p>
+			<input type="text" th:field="${k.nazwisko}" /> <br/>
+			<p> podaj e-mail </p>
+			<input type="email" th:field="${k.email}" /> <br/>
+			<input type="submit" value="wyślij" />
+			
+		
+		</form>
+		
+	</body>
+
+</html>

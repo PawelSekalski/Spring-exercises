@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+	
+	<body>
+		<h1> witaj w bloku </h1>
+		<a href = "/">o mnie</a> <br/>
+		<a href = "#">blog</a> <br/>
+		<a href = "/kontakt">kontakt</a>
+		
+	<p> Dodaj post </p>
+	<form th:action="@{/dodaj}" method="post">
+		<p> tytuł </p>
+		<input type="text" th:field="${post.tytul}" /> <br/>
+		
+		<p> treść </p>
+		<textarea th:field="${post.tresc}"> </textarea> <br/>
+		
+		<p> podpis </p>
+		<input type="text" th:field="${post.podpis}" /> <br/>
+		<input type="submit" value="wyślij" />
+	
+		</form>
+	
+	</body>
+
+</html>

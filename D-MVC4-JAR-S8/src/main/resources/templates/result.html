@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<body>
+
+		<p> rata kredytu: </p>
+		<p th:text="${(credit.kwotaKredytu*(1+credit.p))/credit.czasSplaty}">  </p>
+		
+		<p> kwota do sp³aty: </p>
+		<p th:text="${credit.kwotaKredytu*(1+credit.p)}">  </p>
+		
+	</body>
+
+</html>
